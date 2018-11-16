@@ -1,0 +1,11 @@
+# lines is a RDD
+lines = sc.textFile('/user/ubunt1/husain/big_datasets/training.csv')
+
+# Find the number of rows in lines RDD
+lines.count()
+
+#print first line of lines RDD
+lines.first()
+
+# filter lines with 'userid' string in them
+usrlines = lines.filter(lambda line: 'userid' in line)
